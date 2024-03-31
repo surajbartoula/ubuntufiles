@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 05:33:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/03/30 19:54:13 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/03/31 20:20:51 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 # include "libft/libft.h"
 
 void		error();
-int		open_file(char *file, int in_or_out);
 void		ft_free_tab(char **tab);
 char		*get_path(char *cmd, char **env);
 
