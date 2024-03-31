@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 05:33:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/03/25 09:02:37 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/03/30 19:54:13 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,9 @@
 # include <stdlib.h>
 # include "libft/libft.h"
 
-void		exit_handler(int n_exit);
+void		error();
 int		open_file(char *file, int in_or_out);
 void		ft_free_tab(char **tab);
-char		*my_getenv(char *name, char **env);
 char		*get_path(char *cmd, char **env);
 
 #endif
