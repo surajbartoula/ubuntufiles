@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 05:33:22 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/03/31 20:20:51 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/04/02 18:30:21 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,11 @@
 # include <stdlib.h>
 # include "libft/libft.h"
 
-void		error();
+void		error(void);
 void		ft_free_tab(char **tab);
+void		execute(char *cmd, char **env);
+void		child_proc(char **argv, int *pipefd, char **env);
+void		parent_proc(char **argv, int *pipefd, char **env);
 char		*get_path(char *cmd, char **env);
 
 #endif

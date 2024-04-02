@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 06:03:18 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/03/31 20:17:58 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/04/02 18:31:11 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "pipex.h"
 #include <stdio.h>
 
-void	error()
+void	error(void)
 {
 	perror("Error");
 	exit(-1);
@@ -22,7 +22,7 @@ void	error()
 
 void	ft_free_tab(char **tab)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (tab[i])
@@ -35,7 +35,7 @@ void	ft_free_tab(char **tab)
 
 char	*get_path(char *cmd, char **env)
 {
-	int	i;
+	int		i;
 	char	*exec;
 	char	**allpath;
 	char	*path_part;

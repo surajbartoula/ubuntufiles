@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 05:26:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/03/31 20:19:25 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/04/02 18:28:55 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	child_proc(char **argv, int *pipefd, char **env)
 
 int	main(int argc, char *argv[], char *env[])
 {
-	int	pipefd[2];
+	int		pipefd[2];
 	pid_t	pid;
 
 	if (argc == 5)
