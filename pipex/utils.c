@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 06:03:18 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/04/02 18:31:11 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/04/08 05:55:22 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	error(void)
 {
 	perror("Error");
-	exit(-1);
+	exit(EXIT_FAILURE);
 }
 
 void	ft_free_tab(char **tab)

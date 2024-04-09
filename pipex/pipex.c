@@ -6,7 +6,7 @@
 /*   By: sbartoul <sbartoul@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 05:26:30 by sbartoul          #+#    #+#             */
-/*   Updated: 2024/04/02 18:28:55 by sbartoul         ###   ########.fr       */
+/*   Updated: 2024/04/09 07:44:31 by sbartoul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ void	execute(char *cmd, char **env)
 	if (execve(path, s_cmd, env) == -1)
 	{
 		ft_free_tab(s_cmd);
-		ft_putstr_fd("pipex: command not found: ", 2);
-		ft_putendl_fd(s_cmd[0], 2);
-		exit(0);
+		error();
 	}
 }
 
@@ -51,7 +49,7 @@ void	child_proc(char **argv, int *pipefd, char **env)
 {
 	int	fd;
 
-	fd = open(argv[1], O_RDONLY, 0777);
+	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		error();
 	dup2(pipefd[1], STDOUT_FILENO);
@@ -74,8 +72,8 @@ int	main(int argc, char *argv[], char *env[])
 			error();
 		if (pid == 0)
 			child_proc(argv, pipefd, env);
-		waitpid(pid, NULL, 0);
 		parent_proc(argv, pipefd, env);
+		waitpid(pid, NULL, 0);
 	}
 	else
 	{
